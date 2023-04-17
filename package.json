@@ -1,15 +1,15 @@
 {
   "name": "geo_launcher",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "start": "electron ."
   },
-  "dependencies": {
-    "vue": "^3.2.13"
-  },
+  "author": "Zombii",
+  "license": "M4X&ZOMBII",
   "devDependencies": {
-    "@vue/cli-service": "~5.0.0"
+    "electron": "^24.1.2",
+    "shell": "^0.5.1"
   }
 }
