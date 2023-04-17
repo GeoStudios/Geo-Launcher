@@ -1,7 +1,7 @@
-window.loadFile = require
-window.loadLib = require
-window.path = loadLib('path')
-window.fs = loadLib('fs')
+window.loadItem = require
+window.path = require('path')
+window.fs = require('fs')
+window.apiVer = "1.0"
 
 window.addEventListener("DOMContentLoaded", ()=>{
 
@@ -12,5 +12,5 @@ window.addEventListener("DOMContentLoaded", ()=>{
         program.setAttribute("class", "prgmBtn")
         programs.append(program)
     }
-    loadFile("./plugins/index.js")
+    require("./plugins/index.js")
 })

@@ -1,9 +1,15 @@
 function filepath(file2){
     return path.join(path.dirname(__filename), file2)
 }
+
 const config = loadFile(filepath("../packs.json"))
 if (config.packs != []){
-    for (let i = 0; i < config.packs.length; i++){
-        loadLib(filepath("../"+config.packs[i]+"/pack.js"))   
-    } 
+    loop(config.packs.length, (i)=>{
+        if (LoadPlugJson(config.packs[i]).apiVer == apiVer || CbaseSupported.includes(LoadPlugJson(config.packs[i]).apiVer)){
+            LoadPlug(config.packs[i])
+        }else if (LoadPlugJson(config.packs[i]).apiVer != "*"){
+            ShowError("Plugin "+config.packs[i]+" is based on launcher apiVer "+LoadPlugJson(config.packs[i]).apiVer+" and current launcher apiVer is "+apiVer)
+        }
+    })
+    
 }
