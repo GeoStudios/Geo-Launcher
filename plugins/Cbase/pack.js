@@ -7,7 +7,7 @@ try {
 try {
     window.loadFile = loadItem
     window.loadLib = loadItem
-}catch{}
+1}catch{}
 
 function filepath(file2){
     return path.join(path.dirname(__filename), file2)
@@ -17,12 +17,20 @@ function LoadPlug(plug){
     return loadItem(filepath("../"+plug+"/pack.js"))  
 }
 
+function LoadNest(plug, nest){
+    return loadItem(filepath("../"+plug+"/sub/"+nest+".js"))  
+}
+
 function LoadPlugJson(plug){
     return loadItem(filepath("../"+plug+"/pack.json"))  
 }
 
-function LoadPlugLib(plug){
+function LoadLib(plug){
     return loadItem(filepath("../"+plug+"/lib.js"))  
+}
+
+function LoadNestLib(plug, nest){
+    return loadItem(filepath("../"+plug+"/sub/nest.js"))  
 }
 
 window.ShowError = (errormsg)=>{
