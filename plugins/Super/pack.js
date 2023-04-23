@@ -1,5 +1,5 @@
 function getFilePath(file2, currentFile){
-    return path.join(path.dirname(currentFile), file2)
+    return modules.path.join(modules.path.dirname(currentFile), file2)
 }
 
 function LoadPlug(plug){
