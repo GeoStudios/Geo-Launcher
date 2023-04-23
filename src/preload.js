@@ -1,14 +1,15 @@
-function filepath(file2){
-    return path.join(path.dirname(__filename), file2)
-}
-
 window.loadItem = require
 window.modules = {
-
-    "path":require("path"),
-    "fs":require("fs")
-
+    
+    path:require("path"),
+    fs:require("fs")
+    
 }
+
+function filepath(file2){
+    return modules.path.join(modules.path.dirname(__filename), file2)
+}
+
 window.apiVer = "1.0"
 window.addEventListener("DOMContentLoaded", ()=>{
 
