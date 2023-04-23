@@ -1,5 +1,8 @@
-function filepath(file2){
-    return modules.path.join(modules.path.dirname(__filename), file2)
-}
+/* Gets the full path of any file in the plugin */
+const filepath = (file)=> { return getFilePath(file, __filename) }
 
-LoadLib("Super/libs/stylepack/").setStyle(filepath, "styles/opt1.css")
+/* Loads Stylepack Lib*/
+const StylePack = LoadLib("Super/libs/stylepack/")
+
+/* Load Up the Plugin Within the Launcher*/
+StylePack.setStyle(filepath, "styles/opt1.css")
