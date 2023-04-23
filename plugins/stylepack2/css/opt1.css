@@ -1,9 +1,11 @@
-@import url("../../../style.css");
+@import url("../../../public/style.css");
 
 html, body{
-    background-color: blue;
+    background-color: black;
 }
 
 .prgmBtn{
-    background-color: green;
+    border-style: solid;
+    border-color: orange;
+    background-color: black;
 }

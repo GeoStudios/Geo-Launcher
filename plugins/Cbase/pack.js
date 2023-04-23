@@ -44,7 +44,7 @@ function loop(num, func){
 }
 
 window.LoadPlug = LoadPlug
-window.LoadPlugLib = LoadPlugLib
+window.LoadLib = LoadLib
 window.LoadPlugJson = LoadPlugJson
 window.loop = loop
 

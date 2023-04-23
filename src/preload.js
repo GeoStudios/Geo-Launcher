@@ -12,5 +12,5 @@ window.addEventListener("DOMContentLoaded", ()=>{
         program.setAttribute("class", "prgmBtn")
         programs.append(program)
     }
-    require("./plugins/index.js")
+    require("../plugins/index.js")
 })
