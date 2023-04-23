@@ -11,4 +11,3 @@ To Run the Program
 Package to "out" folder
 <br />
 `npm run package`
-``
