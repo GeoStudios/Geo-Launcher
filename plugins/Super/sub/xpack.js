@@ -2,7 +2,7 @@ function filepath(file2){
     return path.join(path.dirname(__filename), file2)
 }
 
-const config = loadFile(filepath("../packs.json"))
+const config = loadFile(filepath("../../../config/Xpack/packs.json"))
 if (config.packs != []){
     loop(config.packs.length, (i)=>{
         if (LoadPlugJson(config.packs[i]).apiVer == apiVer || CbaseSupported.includes(LoadPlugJson(config.packs[i]).apiVer)){
