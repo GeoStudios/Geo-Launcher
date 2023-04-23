@@ -9,3 +9,9 @@ html, body{
     border-color: orange;
     background-color: black;
 }
+
+.prgmBtn:hover{
+    border-style: solid;
+    border-color: rgb(255, 209, 124);
+    background-color: black;
+}
