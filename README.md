@@ -11,3 +11,5 @@ To Run the Program
 Package to "out" folder
 <br />
 `npm run package`
+
+[Wiki](https://github.com/GeoStudios/Wiki/blob/main/Projects/Geo-Launcher/readme.md)
