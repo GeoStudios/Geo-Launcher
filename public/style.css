@@ -1,3 +1,10 @@
+.Image{
+    
+    width: 70%;
+    height: 70%;
+    border: none;
+}
+
 .prgmBtn{
 
     width: 188px;
