@@ -13,6 +13,11 @@ try {
     console.log("2.0 Support Error")
 }
 
+window.LoadPlug = ExternalLoader.LoadPlugin
+window.LoadPlugJson = ExternalLoader.LoadManifest
+window.LoadNest = ExternalLoader.LoadSubPlugin
+window.LoadLib = (libpak) => {return ExternalLoader.LoadLibrary(libpak.split("/")[0].trim(), libpak.split("/")[libpak.split("/").length-1].trim())}
+
 function filepath(file2){
     return modules.path.join(modules.path.dirname(__filename), file2)
 }

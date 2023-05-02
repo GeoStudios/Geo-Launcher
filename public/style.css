@@ -3,13 +3,49 @@
     width: 188px;
     height: 188px;
     margin: 7px;
-    border-radius: 65px;
 
 }
 
 #programs{
 
     width: 75%;
-    height: 100%;
+    height: fit-content;
+    float: left;
 
+}
+
+#play{
+
+    width: 25%;
+    height: fit-content;
+    float: right;
+
+}
+
+#p1, #p2, #p3, #p4{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+
+}
+
+.large-game-icon{
+    margin-top: 20%;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+
+}
+
+.playbtn{
+    margin: 10px;
+    width: 170px;
+    padding: 10px;
+}
+.updatebtn{
+    margin: 10px;
+    width: 150px;
 }

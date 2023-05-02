@@ -19,7 +19,9 @@
     "electron": "^24.1.2"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "child_process": "^1.0.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "request": "^2.88.2"
   },
   "config": {
     "forge": {
