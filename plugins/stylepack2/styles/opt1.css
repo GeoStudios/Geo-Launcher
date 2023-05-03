@@ -8,4 +8,44 @@ html, body{
     border-style: solid;
     border-color: orange;
     background-color: black;
+    border-radius: 65px;
+}
+
+.prgmBtn:hover{
+    border-color: rgb(255, 209, 124);
+}
+
+.large-game-icon{
+    border-style: solid;
+    border-color: rgb(255, 106, 0);
+    background-color: black;
+    border-radius: 65px;
+}
+
+.GameTitle{
+    color: white;
+}
+
+.playbtn{
+    border-color: rgb(37, 130, 0);
+    border-style: solid;
+    background-color: rgb(72, 255, 0);
+    border-radius: 65px;
+}
+
+.playbtn:hover{
+    border-color: rgb(62, 218, 0);
+    background-color: rgb(122, 255, 70);
+}
+
+.updatebtn{
+    border-color: rgb(0, 78, 130);
+    border-style: solid;
+    background-color: rgb(0, 123, 255);
+    border-radius: 65px;
+}
+
+.updatebtn:hover{
+    border-color: rgb(0, 124, 206);
+    background-color: rgb(77, 163, 255);
 }

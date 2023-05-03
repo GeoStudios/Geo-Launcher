@@ -1,5 +1,5 @@
 function filepath(file2){
-    return path.join(path.dirname(__filename), file2)
+    return modules.path.join(modules.path.dirname(__filename), file2)
 }
 const config = loadFile(filepath("../../../config/Super/styles.json"))
 
