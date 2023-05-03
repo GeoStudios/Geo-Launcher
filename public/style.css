@@ -1,8 +1,14 @@
+*{
+
+    user-select: none;
+
+}
 .Image{
     
     width: 70%;
     height: 70%;
     border: none;
+    
 }
 
 .prgmBtn{
@@ -39,6 +45,7 @@
 }
 
 .large-game-icon{
+
     margin-top: 20%;
     margin-right: 10px;
     margin-left: 10px;
@@ -48,11 +55,15 @@
 }
 
 .playbtn{
+
     margin: 10px;
     width: 170px;
     padding: 10px;
+
 }
 .updatebtn{
+
     margin: 10px;
     width: 150px;
+
 }

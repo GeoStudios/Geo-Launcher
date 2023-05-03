@@ -15,11 +15,15 @@ function LoadProgramIntoLarge(ProgramInfo){
     const g = document.getElementById("game")
     g.src = `${ProgramInfo.ContentLogo.large_200}`
     const p = document.getElementById("playbtn")
-    p.innerText = `Play ${ProgramInfo.Name}`
-    p.onclick = ()=>{
-        RunExecutable(ProgramInfo.startCommand)
+    if (ProgramInfo.Name.includes("$NOPLAYCHANGE")){
+        p.innerText = "Play"
+    }else{
+        p.innerText = `Play ${ProgramInfo.Name}`
     }
-    document.getElementById("GameTitle").innerText = ProgramInfo.Name
+    p.onclick = ()=>{
+        RunExecutable(ProgramInfo.startCommand.replace("^loc", ProgramInfo.NLocation).replace("^file", ProgramInfo.fileName))
+    }
+    document.getElementById("GameTitle").innerText = ProgramInfo.Name.replace("$NOPLAYCHANGE", "")
 
 }
 
@@ -30,9 +34,11 @@ for (let i=1;i<61;i++){
                 small_188:"https://github.com/GeoStudios/ContentStorage/blob/1bb213130a1bb00ea3a5a9466e1d241ed32d5466/GeoLauncher/NoProgram.png?raw=true",
                 large_200:"https://github.com/GeoStudios/ContentStorage/blob/1bb213130a1bb00ea3a5a9466e1d241ed32d5466/GeoLauncher/NoProgram.png?raw=true"
             },
-            Name:"Empty Program Slot",
+            Name:"Choose$NOPLAYCHANGE",
             DownloadUrl:"",
-            startCommand:"echo No Program Selected"
+            fileName:"",
+            NLocation:"",
+            startCommand:"echo No Program Selected",
         }, LoadProgramIntoLarge
 
     )
@@ -47,6 +53,8 @@ ClaimProgramSlot(1,
         },
         Name:"MiniCal",
         DownloadUrl:"",
-        startCommand:"java -jar programs/program1/SuperCal.jar"
+        fileName:"SuperCal.jar",
+        NLocation:"programs/program1",
+        startCommand:"java -jar ^loc/^file"
     }
     , LoadProgramIntoLarge)
